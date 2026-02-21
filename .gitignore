@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environment variables (contains secrets!)
+.env
+.env.local
+.env.production
+
+# Uploaded files
+server/uploads/
+
+# Build output
+server/dist/
+client/dist/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

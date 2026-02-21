@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: flashfile-mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+
+  server:
+    build: ./server
+    container_name: flashfile-server
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://mongo:27017/flashfile
+      - FILE_TTL_HOURS=24
+      - MAX_FILE_SIZE_MB=50
+      - CLIENT_URL=http://localhost:5173
+    depends_on:
+      - mongo
+    volumes:
+      - uploads:/app/uploads
+    restart: unless-stopped
+
+  client:
+    build: ./client
+    container_name: flashfile-client
+    ports:
+      - '5173:5173'
+    depends_on:
+      - server
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
+  uploads:
