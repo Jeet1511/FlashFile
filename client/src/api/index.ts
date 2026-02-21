@@ -12,8 +12,13 @@ export const uploadFile = async (file: File): Promise<any> => {
     });
 
     if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || 'Upload failed');
+        const text = await res.text();
+        try {
+            const err = JSON.parse(text);
+            throw new Error(err.error || 'Upload failed');
+        } catch {
+            throw new Error('Server is not reachable. Make sure the server is running.');
+        }
     }
 
     return res.json();
@@ -23,8 +28,13 @@ export const getFileByCode = async (code: string): Promise<any> => {
     const res = await fetch(`${API_BASE}/files/${code}`);
 
     if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || 'File not found');
+        const text = await res.text();
+        try {
+            const err = JSON.parse(text);
+            throw new Error(err.error || 'File not found');
+        } catch {
+            throw new Error('Server is not reachable. Make sure the server is running.');
+        }
     }
 
     return res.json();
@@ -38,8 +48,13 @@ export const getDashboard = async (): Promise<any> => {
     const res = await fetch(`${API_BASE}/dashboard`);
 
     if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.error || 'Dashboard load failed');
+        const text = await res.text();
+        try {
+            const err = JSON.parse(text);
+            throw new Error(err.error || 'Dashboard load failed');
+        } catch {
+            throw new Error('Server is not reachable. Make sure the server is running.');
+        }
     }
 
     return res.json();
