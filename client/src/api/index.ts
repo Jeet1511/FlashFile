@@ -1,4 +1,6 @@
-const API_BASE = '/api';
+const API_BASE = import.meta.env.PROD
+    ? 'https://flashfile.onrender.com/api'
+    : '/api';
 
 export const uploadFile = async (file: File): Promise<any> => {
     const formData = new FormData();
