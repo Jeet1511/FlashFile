@@ -9,8 +9,12 @@ import dashboardRoutes from './routes/dashboard.routes';
 const app = express();
 
 // Middleware
+const allowedOrigin = env.CLIENT_URL.endsWith('/')
+    ? env.CLIENT_URL.slice(0, -1)
+    : env.CLIENT_URL;
+
 app.use(cors({
-    origin: env.CLIENT_URL,
+    origin: allowedOrigin,
     credentials: true,
 }));
 app.use(express.json());
