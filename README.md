@@ -82,7 +82,7 @@ docker compose up
 | Variable | Default | Description |
 |---|---|---|
 | `PORT` | `5000` | Server port |
-| `MONGO_URI` | `mongodb://localhost:27017/maskbee` | MongoDB URI |
+| `MONGO_URI` | `mongodb://localhost:27017/flashfile` | MongoDB URI |
 | `FILE_TTL_HOURS` | `24` | File expiry time (hours) |
 | `MAX_FILE_SIZE_MB` | `50` | Max upload size |
 | `CLIENT_URL` | `http://localhost:5173` | Frontend URL (for CORS & QR) |
