@@ -1,5 +1,5 @@
 /* ========================================
-   FlashFile — Premium Dark Theme
+   Mask Bee — Premium Dark Theme
    Lucide Icons + Animations + Mobile-First
    ======================================== */
 
@@ -96,6 +96,14 @@ a:hover {
   animation: iconFloat 3s ease-in-out infinite;
 }
 
+.icon-bee-buzz {
+  animation: beeBuzz 0.5s ease-in-out infinite;
+}
+
+.icon-bee-float {
+  animation: beeFloat 4s ease-in-out infinite;
+}
+
 .icon-breathe {
   animation: iconBreathe 2.5s ease-in-out infinite;
 }
@@ -139,6 +147,81 @@ a:hover {
 
   50% {
     transform: translateY(-3px);
+  }
+}
+
+@keyframes beeBuzz {
+
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+
+  25% {
+    transform: rotate(2deg) translateX(1px);
+  }
+
+  75% {
+    transform: rotate(-2deg) translateX(-1px);
+  }
+}
+
+@keyframes beeFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  25% {
+    transform: translateY(-5px) translateX(2px);
+  }
+
+  /* Fixed nested keyframe */
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  25% {
+    transform: translateY(-5px) translateX(2px);
+  }
+
+  50% {
+    transform: translateY(0) translateX(4px);
+  }
+
+  75% {
+    transform: translateY(5px) translateX(2px);
+  }
+}
+
+/* Custom Bee SVG Styles */
+.bee-body {
+  color: #fbbf24;
+  /* Yellow-400 */
+}
+
+.bee-wing-left,
+.bee-wing-right {
+  transform-origin: 12px 10px;
+  animation: wingFlap 0.1s ease-in-out infinite;
+}
+
+.bee-wing-right {
+  animation-delay: 0.05s;
+}
+
+@keyframes wingFlap {
+
+  0%,
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  50% {
+    transform: scaleX(1.2) scaleY(0.8);
   }
 }
 

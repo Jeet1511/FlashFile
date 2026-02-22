@@ -1,7 +1,7 @@
 {
-    "name": "flashfile-server",
+    "name": "mask-bee-server",
     "version": "1.0.0",
-    "description": "FlashFile backend — temporary file sharing API",
+    "description": "Mask Bee backend — temporary file sharing API",
     "main": "dist/server.js",
     "scripts": {
         "dev": "ts-node-dev --respawn --transpile-only src/server.ts",

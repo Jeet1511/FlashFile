@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getDashboard } from '../api';
-import { Zap, ArrowLeft, Loader, AlertTriangle, Files, HardDrive, Download } from 'lucide-react';
+import { ArrowLeft, Loader, AlertTriangle, Files, HardDrive, Download } from 'lucide-react';
+import Bee from '../components/Bee';
 import FileList from '../components/FileList';
 
 const Dashboard: React.FC = () => {
@@ -37,8 +38,8 @@ const Dashboard: React.FC = () => {
         <div className="page dashboard-page">
             <nav className="top-nav">
                 <Link to="/" className="nav-brand">
-                    <Zap size={20} className="icon-pulse" />
-                    FlashFile
+                    <Bee size={20} className="icon-bee-buzz" />
+                    Mask Bee
                 </Link>
                 <Link to="/" className="btn btn-secondary btn-sm">
                     <ArrowLeft size={14} />

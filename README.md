@@ -1,4 +1,4 @@
-# ⚡ FlashFile
+# 🐝 Mask Bee
 
 Temporary file sharing platform. Upload any file, get a **short code** and **QR code**. Anyone with the code can download it. Files auto-expire.
 
@@ -31,7 +31,7 @@ Temporary file sharing platform. Upload any file, get a **short code** and **QR 
 
 ```bash
 # Option A: Docker
-docker run -d -p 27017:27017 --name flashfile-mongo mongo:7
+docker run -d -p 27017:27017 --name mask-bee-mongo mongo:7
 
 # Option B: Local MongoDB
 mongod
@@ -82,7 +82,7 @@ docker compose up
 | Variable | Default | Description |
 |---|---|---|
 | `PORT` | `5000` | Server port |
-| `MONGO_URI` | `mongodb://localhost:27017/flashfile` | MongoDB URI |
+| `MONGO_URI` | `mongodb://localhost:27017/maskbee` | MongoDB URI |
 | `FILE_TTL_HOURS` | `24` | File expiry time (hours) |
 | `MAX_FILE_SIZE_MB` | `50` | Max upload size |
 | `CLIENT_URL` | `http://localhost:5173` | Frontend URL (for CORS & QR) |
@@ -90,7 +90,7 @@ docker compose up
 ## Project Structure
 
 ```
-flashfile/
+mask-bee/
 ├── client/          # React frontend (Vite)
 ├── server/          # Express backend
 ├── shared/          # Shared TypeScript types

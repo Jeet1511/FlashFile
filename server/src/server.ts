@@ -17,7 +17,7 @@ const start = async (): Promise<void> => {
         // Start server
         app.listen(env.PORT, () => {
             console.log(`
-  ⚡ FlashFile Server running!
+  🐝 Mask Bee Server running!
   🌐 http://localhost:${env.PORT}
   📁 Upload dir: ${env.UPLOAD_DIR}
   ⏱️  File TTL: ${env.FILE_TTL_HOURS} hours

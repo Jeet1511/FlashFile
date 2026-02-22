@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getFileByCode, getDownloadUrl } from '../api';
-import { Zap, ArrowLeft, Loader, Search, Copy, Download, Image, Video, Music, FileText, Package, FileType, Paperclip } from 'lucide-react';
+import { ArrowLeft, Loader, Search, Copy, Download, Image, Video, Music, FileText, Package, FileType, Paperclip } from 'lucide-react';
+import Bee from '../components/Bee';
 import QRView from '../components/QRView';
 
 const FileView: React.FC = () => {
@@ -62,8 +63,8 @@ const FileView: React.FC = () => {
         <div className="page file-view-page">
             <nav className="top-nav">
                 <Link to="/" className="nav-brand">
-                    <Zap size={20} className="icon-pulse" />
-                    FlashFile
+                    <Bee size={20} className="icon-bee-buzz" />
+                    Mask Bee
                 </Link>
                 <Link to="/" className="btn btn-secondary btn-sm">
                     <ArrowLeft size={14} />

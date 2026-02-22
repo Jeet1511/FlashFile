@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Upload, KeyRound, Shield, Clock, QrCode, Zap, ArrowRight, Github, Instagram, LayoutDashboard } from 'lucide-react';
+import { Upload, KeyRound, Shield, Clock, QrCode, ArrowRight, Github, Instagram, LayoutDashboard } from 'lucide-react';
+import Bee from '../components/Bee';
 import UploadForm from '../components/UploadForm';
 import CodeAccess from '../components/CodeAccess';
 
@@ -9,8 +10,8 @@ const Home: React.FC = () => {
         <div className="page home-page">
             <nav className="top-nav">
                 <Link to="/" className="nav-brand">
-                    <Zap size={20} className="icon-pulse" />
-                    FlashFile
+                    <Bee size={20} className="icon-bee-buzz" />
+                    Mask Bee
                 </Link>
                 <Link to="/dashboard" className="btn btn-secondary btn-sm">
                     <LayoutDashboard size={16} />
@@ -22,11 +23,11 @@ const Home: React.FC = () => {
                 <div className="hero-glow"></div>
                 <div className="hero-content">
                     <div className="hero-badge">
-                        <Zap size={14} className="icon-pulse" />
+                        <Bee size={14} className="icon-bee-buzz" />
                         Instant File Sharing
                     </div>
                     <h1 className="hero-title">
-                        Share files in a <span className="gradient-text">flash</span>
+                        Share files with <span className="gradient-text">Mask Bee</span>
                     </h1>
                     <p className="hero-subtitle">
                         Upload any file, get a short code & QR. No sign-up, no hassle.
@@ -79,7 +80,7 @@ const Home: React.FC = () => {
                     </div>
                     <div className="feature-card">
                         <div className="feature-icon-wrapper">
-                            <Zap size={28} className="icon-pulse" />
+                            <Bee size={28} className="icon-bee-buzz" />
                         </div>
                         <h3>Lightning Fast</h3>
                         <p>Upload and share in seconds. No waiting, no compression.</p>
@@ -90,8 +91,8 @@ const Home: React.FC = () => {
             <footer className="footer">
                 <div className="footer-content">
                     <div className="footer-brand-row">
-                        <Zap size={18} className="icon-pulse" />
-                        <span className="footer-brand">FlashFile</span>
+                        <Bee size={18} className="icon-bee-buzz" />
+                        <span className="footer-brand">Mask Bee</span>
                     </div>
                     <span className="footer-copy">Temporary file sharing. No sign-up required.</span>
                     <div className="footer-links">

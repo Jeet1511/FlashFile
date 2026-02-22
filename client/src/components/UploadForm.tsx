@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { uploadFile } from '../api';
-import { CheckCircle, Copy, Zap, Upload, Loader } from 'lucide-react';
+import { CheckCircle, Copy, Upload, Loader } from 'lucide-react';
+import Bee from './Bee';
 import QRView from './QRView';
 
 const UploadForm: React.FC = () => {
@@ -118,7 +119,7 @@ const UploadForm: React.FC = () => {
                 <QRView qrCode={result.qrCode} code={result.code} />
 
                 <button className="btn btn-primary" onClick={resetForm}>
-                    <Zap size={16} className="icon-pulse" />
+                    <Bee size={16} className="icon-bee-buzz" />
                     Upload Another File
                 </button>
             </div>

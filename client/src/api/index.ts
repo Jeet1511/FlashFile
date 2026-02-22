@@ -1,5 +1,5 @@
 const API_BASE = import.meta.env.PROD
-    ? 'https://flashfile.onrender.com/api'
+    ? 'https://mask-bee.onrender.com/api'
     : '/api';
 
 export const uploadFile = async (file: File): Promise<any> => {
